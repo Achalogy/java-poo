@@ -118,9 +118,7 @@ public class App {
         matriz[y][x] = input.nextInt();
 
     for (int y = 0; y < 3; y++)
-      for (int x = 0; x < 3; x++)
-        if (y == x)
-          suma += matriz[y][x];
+          suma += matriz[y][y];
 
     System.out.println("La suma de las diagonales es: " + suma);
   }
@@ -136,7 +134,7 @@ public class App {
     cExamenes = input.nextInt();
 
     int mejorPromedio = 0;
-    int peorpromedio = 100;
+    int peorPromedio = 100;
 
     int[] promedios = new int[cEstudiantes];
 
@@ -158,7 +156,7 @@ public class App {
       promedios[e] /= cExamenes;
 
       mejorPromedio = Math.max(mejorPromedio, promedios[e]);
-      peorpromedio = Math.min(peorpromedio, promedios[e]);
+      peorPromedio = Math.min(peorPromedio, promedios[e]);
 
       System.out.print("El promedio del estudiante #" + (e + 1) + " es de " + promedios[e]);
       if (promedios[e] >= 60)
@@ -169,7 +167,7 @@ public class App {
     }
 
     System.out.println("El mejor promedio es " + mejorPromedio);
-    System.out.println("El peor promedio es " + peorpromedio);
+    System.out.println("El peor promedio es " + peorPromedio);
   }
 
   public static int printMenu(String[] menuOptions) {
