@@ -200,11 +200,6 @@ public class App {
 
     System.out.print("\nPulse enter para continuar...");
     input.nextLine();
-
-    for (int i = 0; i < array.length; i++) {
-      
-    }
-
     clearConsole();
   }
 }
